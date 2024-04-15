@@ -12,12 +12,41 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            $table->id(); // Clé primaire 'id'
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            
+            $table->string('prenom_user')->nullable();
+            $table->string('username')->unique();
+            $table->string('actor_type');
+            $table->string('gender')->nullable();
+            $table->integer('age')->nullable();
+            $table->string('social_status')->nullable();
+            $table->string('company_size')->nullable();
+            $table->string('service_type')->nullable();
+            $table->string('organization_type')->nullable();
+            $table->string('second_organization_type')->nullable();
+            $table->string('communication_type')->nullable();
+            $table->string('mena_type')->nullable();
+            $table->string('mena_status')->nullable();
+            $table->string('sector')->nullable();
+            $table->string('industry')->nullable();
+            $table->string('construction')->nullable();
+            $table->string('commerce')->nullable();
+            $table->string('services')->nullable();
+            $table->string('country');
+            $table->string('phone');
+            $table->string('local_area');
+            $table->string('address');
+            $table->string('active_zone')->nullable();
+            $table->string('photo')->nullable();
+
+            // // Foreign key for admin
+            // $table->foreignId('admin_id')->nullable()->constrained('admins', 'id')
+            //     ->onDelete('cascade')
+            //     ->onUpdate('cascade');
+
             $table->rememberToken();
             $table->timestamps();
         });
@@ -43,8 +72,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
-        Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
+        Schema::dropIfExists('password_reset_tokens');
+        Schema::dropIfExists('users');
     }
 };
