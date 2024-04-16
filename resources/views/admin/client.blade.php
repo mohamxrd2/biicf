@@ -1,8 +1,11 @@
 @extends('admin.layout.adminside')
 
-@section('title', 'Liste agent')
+@section('title', 'Client')
 
 @section('content')
+
+       
+
 
 
 @endsection

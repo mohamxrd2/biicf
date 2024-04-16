@@ -187,55 +187,36 @@
                     </a>
                 </li>
                 <hr>
+                <li class="">
+                  <a class="flex items-center gap-x-3.5 py-2 px-2.5 @if(request()->route()->getName() == 'admin.agent')  bg-gray-100 text-blue-700 @endif text-sm  rounded-lg hover:bg-gray-100 dark:bg-gray-900 dark:text-white"
+                      href="{{ route('admin.agent') }}">
+                      <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
 
 
-                <li class="hs-accordion @if(request()->route()->getName() == 'admin.addagent') hs-accordion-active @endif">
-                    <button type="button"
-                        class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5
-                        @if(request()->route()->getName() == 'admin.addagent' || request()->route()->getName() == 'admin.listagent') text-blue-600 @else bg-transparent text-slate-700 hover:bg-gray-100 @endif
-                        text-sm rounded-lg dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:hover:bg-gray-900 dark:hs-accordion-active:text-white">
-                        <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                            <circle cx="9" cy="7" r="4" />
-                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                        </svg>
-                        Agents
-                
-                        <svg class="hs-accordion-active:block ms-auto hidden size-4"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <path d="m18 15-6-6-6 6" />
-                        </svg>
+                      Agents
+                  </a>
+              </li>
 
-                        <svg class="hs-accordion-active:hidden ms-auto block size-4"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <path d="m6 9 6 6 6-6" />
-                        </svg>
-                    </button>
-                
-                    <div id="account-accordion-child"
-                        class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 @if(request()->route()->getName() == 'admin.addagent' || request()->route()->getName() == 'admin.listagent') block @else hidden @endif">
-                        <ul class="pt-2 ps-2">
-                            <li>
-                                <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm @if(request()->route()->getName() == 'admin.addagent') bg-gray-100 text-blue-700 @endif rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
-                                    href="{{ route('admin.addagent') }}">
-                                    Ajouter Agent
-                                </a>
-                            </li>
-                            <li>
-                                <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm @if(request()->route()->getName() == 'admin.listagent') bg-gray-100 text-blue-700 @endif rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
-                                    href="{{ route('admin.listagent') }}">
-                                    Listes des agents
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                
+              <li class="">
+                <a class="flex items-center gap-x-3.5 py-2 px-2.5 @if(request()->route()->getName() == 'admin.client')  bg-gray-100 text-blue-700 @endif text-sm  rounded-lg hover:bg-gray-100 dark:bg-gray-900 dark:text-white"
+                    href="{{ route('admin.client') }}">
+                    
+                  <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                  </svg>
+                  
+
+
+                    Clients
+                </a>
+            </li>
+
+
                 <li class="">
                     <a class="flex items-center gap-x-3.5 py-2 px-2.5 @if(request()->route()->getName() == 'admin.products')  bg-gray-100 text-blue-700 @endif text-sm  rounded-lg hover:bg-gray-100 dark:bg-gray-900 dark:text-white"
                         href="{{ route('admin.products') }}">
@@ -401,227 +382,7 @@
 
 <script src="https://preline.co/assets/js/hs-apexcharts-helpers.js"></script>
 
-<script>
-  window.addEventListener('load', () => {
-    // Apex Multiple Area Charts
-    (function () {
-      buildChart('#hs-multiple-area-charts', (mode) => ({
-        chart: {
-          height: 300,
-          type: 'area',
-          toolbar: {
-            show: false
-          },
-          zoom: {
-            enabled: false
-          }
-        },
-        series: [
-          {
-            name: 'Income',
-            data: [18000, 51000, 60000, 38000, 88000, 50000, 40000, 52000, 88000, 80000, 60000, 70000]
-          },
-          {
-            name: 'Outcome',
-            data: [27000, 38000, 60000, 77000, 40000, 50000, 49000, 29000, 42000, 27000, 42000, 50000]
-          }
-        ],
-        legend: {
-          show: false
-        },
-        dataLabels: {
-          enabled: false
-        },
-        stroke: {
-          curve: 'straight',
-          width: 2
-        },
-        grid: {
-          strokeDashArray: 2
-        },
-        fill: {
-          type: 'gradient',
-          gradient: {
-            type: 'vertical',
-            shadeIntensity: 1,
-            opacityFrom: 0.1,
-            opacityTo: 0.8
-          }
-        },
-        xaxis: {
-          type: 'category',
-          tickPlacement: 'on',
-          categories: [
-            '25 January 2023',
-            '26 January 2023',
-            '27 January 2023',
-            '28 January 2023',
-            '29 January 2023',
-            '30 January 2023',
-            '31 January 2023',
-            '1 February 2023',
-            '2 February 2023',
-            '3 February 2023',
-            '4 February 2023',
-            '5 February 2023'
-          ],
-          axisBorder: {
-            show: false
-          },
-          axisTicks: {
-            show: false
-          },
-          crosshairs: {
-            stroke: {
-              dashArray: 0
-            },
-            dropShadow: {
-              show: false
-            }
-          },
-          tooltip: {
-            enabled: false
-          },
-          labels: {
-            style: {
-              colors: '#9ca3af',
-              fontSize: '13px',
-              fontFamily: 'Inter, ui-sans-serif',
-              fontWeight: 400
-            },
-            formatter: (title) => {
-              let t = title;
 
-              if (t) {
-                const newT = t.split(' ');
-                t = `${newT[0]} ${newT[1].slice(0, 3)}`;
-              }
-
-              return t;
-            }
-          }
-        },
-        yaxis: {
-          labels: {
-            align: 'left',
-            minWidth: 0,
-            maxWidth: 140,
-            style: {
-              colors: '#9ca3af',
-              fontSize: '13px',
-              fontFamily: 'Inter, ui-sans-serif',
-              fontWeight: 400
-            },
-            formatter: (value) => value >= 1000 ? `${value / 1000}k` : value
-          }
-        },
-        tooltip: {
-          x: {
-            format: 'MMMM yyyy'
-          },
-          y: {
-            formatter: (value) => `$${value >= 1000 ? `${value / 1000}k` : value}`
-          },
-          custom: function (props) {
-            const { categories } = props.ctx.opts.xaxis;
-            const { dataPointIndex } = props;
-            const title = categories[dataPointIndex].split(' ');
-            const newTitle = `${title[0]} ${title[1]}`;
-
-            return buildTooltip(props, {
-              title: newTitle,
-              mode,
-              hasTextLabel: true,
-              wrapperExtClasses: 'min-w-28',
-              labelDivider: ':',
-              labelExtClasses: 'ms-2'
-            });
-          }
-        },
-        responsive: [{
-          breakpoint: 568,
-          options: {
-            chart: {
-              height: 300
-            },
-            labels: {
-              style: {
-                colors: '#9ca3af',
-                fontSize: '11px',
-                fontFamily: 'Inter, ui-sans-serif',
-                fontWeight: 400
-              },
-              offsetX: -2,
-              formatter: (title) => title.slice(0, 3)
-            },
-            yaxis: {
-              labels: {
-                align: 'left',
-                minWidth: 0,
-                maxWidth: 140,
-                style: {
-                  colors: '#9ca3af',
-                  fontSize: '11px',
-                  fontFamily: 'Inter, ui-sans-serif',
-                  fontWeight: 400
-                },
-                formatter: (value) => value >= 1000 ? `${value / 1000}k` : value
-              }
-            },
-          },
-        }]
-      }), {
-        colors: ['#2563eb', '#9333ea'],
-        fill: {
-          gradient: {
-            stops: [0, 90, 100]
-          }
-        },
-        xaxis: {
-          labels: {
-            style: {
-              colors: '#9ca3af'
-            }
-          }
-        },
-        yaxis: {
-          labels: {
-            style: {
-              colors: '#9ca3af'
-            }
-          }
-        },
-        grid: {
-          borderColor: '#e5e7eb'
-        }
-      }, {
-        colors: ['#3b82f6', '#a855f7'],
-        fill: {
-          gradient: {
-            stops: [100, 90, 0]
-          }
-        },
-        xaxis: {
-          labels: {
-            style: {
-              colors: '#a3a3a3',
-            }
-          }
-        },
-        yaxis: {
-          labels: {
-            style: {
-              colors: '#a3a3a3'
-            }
-          }
-        },
-        grid: {
-          borderColor: '#404040'
-        }
-      });
-    })();
-  });
-</script>
 
 
 
